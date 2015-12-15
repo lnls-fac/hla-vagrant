@@ -20,15 +20,15 @@ Configuration
  When using the environment in a shared computer, change the IP addresses
  before creating the virtual machines. For that, change the value of ip in
  master_config.vm.network for all machines in Vagrantfile. You also need to
- change the master's IP address in all machine files except master in etc.
+ change the master's IP address in all machine files except master in hla/etc.
 
 
 Choosing the lnls-fac package versions
 --------------------------------------
 
  The versions of the lnls-fac packages to be used are set in the file
- pillar/versions.sls. To use different versions, simply change the values to
- other valid repository release tags.
+ hla/pillar/versions.sls. To use different versions, simply change the values
+ to other valid repository release tags.
 
 
 Usage
