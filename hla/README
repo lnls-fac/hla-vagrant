@@ -1,0 +1,59 @@
+hla-vagrant
+===========
+
+ Vagrant+SaltStack environment for development and testing
+
+
+Dependencies
+------------
+
+ This repository contains files for setting up an environment for development
+ and testing of the lnls-fac high level applications. To use it, you need to
+ have Vagrant (https://www.vagrantup.com/) and VirtualBox
+ (https://www.virtualbox.org/) installed. In case you do not have them
+ installed, download and follow the instructions from the links.
+
+
+Configuration
+-------------
+
+ When using the environment in a shared computer, change the IP addresses
+ before creating the virtual machines. For that, change the value of ip in
+ master_config.vm.network for all machines in Vagrantfile. You also need to
+ change the master's IP address in all machine files except master in etc.
+
+
+Choosing the lnls-fac package versions
+--------------------------------------
+
+ The versions of the lnls-fac packages to be used are set in the file
+ pillar/versions.sls. To use different versions, simply change the values to
+ other valid repository release tags.
+
+
+Usage
+-----
+
+ To set up the environment, download or clone this repository with
+
+     git clone https://github.com/lnls-fac/hla-vagrant.git
+
+ Then cd into the directory with
+
+     cd hla-vagrant
+
+ and issue
+
+     vagrant up
+
+ On the first run, it may take quite long for the virtual machines to be set
+ up. After the machines have been started, ssh into master with
+
+     vagrant ssh master
+
+ and apply the state by issuing
+
+     sudo salt '*' state.apply
+
+ It may also take a quite long time the first time the state is applies, as
+ many packages need to be downloaded and installed.

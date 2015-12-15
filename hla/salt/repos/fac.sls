@@ -15,6 +15,7 @@ mathphys:
     - rev: {{ pillar['mathphys_version'] }}
     - target: {{ pillar['repo_base_dir'] }}/code/mathphys
     - force_reset: True
+    - user: fac
   cmd.run:
     - name: python3 setup.py {{ pillar['install_command'] }}
     - cwd: {{ pillar['repo_base_dir'] }}/code/mathphys
@@ -25,6 +26,7 @@ trackcpp:
     - rev: {{ pillar['trackcpp_version'] }}
     - target: {{ pillar['repo_base_dir'] }}/code/trackcpp
     - force_reset: True
+    - user: fac
   cmd.run:
     - name: make {{ pillar['install_command'] }}
     - cwd: {{ pillar['repo_base_dir'] }}/code/trackcpp
@@ -35,6 +37,7 @@ pyaccel:
     - rev: {{ pillar['pyaccel_version'] }}
     - target: {{ pillar['repo_base_dir'] }}/code/pyaccel
     - force_reset: True
+    - user: fac
   cmd.run:
     - name: python3 setup.py {{ pillar['install_command'] }}
     - cwd: {{ pillar['repo_base_dir'] }}/code/pyaccel
@@ -45,6 +48,7 @@ scripts:
     - rev: {{ pillar['scripts_version'] }}
     - target: {{ pillar['repo_base_dir'] }}/code/scripts
     - force_reset: True
+    - user: fac
   cmd.run:
     - name: make {{ pillar['install_command'] }}
     - cwd: {{ pillar['repo_base_dir'] }}/code/scripts/bin
@@ -55,6 +59,7 @@ sirius:
     - rev: {{ pillar['sirius_version'] }}
     - target: {{ pillar['repo_base_dir'] }}/code/sirius
     - force_reset: True
+    - user: fac
   cmd.run:
     - name: python3 setup.py {{ pillar['install_command'] }}
     - cwd: {{ pillar['repo_base_dir'] }}/code/sirius

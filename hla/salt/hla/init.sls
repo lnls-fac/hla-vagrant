@@ -1,3 +1,3 @@
 include:
-  - repos.hla
   - hla.hla_packages
+  - repos.hla
