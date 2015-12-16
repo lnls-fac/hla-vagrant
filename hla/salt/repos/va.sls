@@ -8,3 +8,10 @@ va:
   cmd.run:
     - name: python3 setup.py {{ pillar['install_command'] }}
     - cwd: {{ pillar['repo_base_dir'] }}/code/va
+
+siriusdb:
+  git.latest:
+    - name: {{ pillar['repo_base_url'] }}/siriusdb.git
+    - target: {{ pillar['repo_base_dir'] }}/siriusdb
+    - force_reset: True
+    - user: fac
