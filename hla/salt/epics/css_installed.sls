@@ -1,16 +1,20 @@
 css dir exists:
   file.directory:
     - name: /opt/css
-    - user: fac
-    - group: fac
 
 css extracted:
   archive.extracted:
-    - name: /opt/css/sns-css-4.1.0
-    - source: https://ics-web.sns.ornl.gov/css/updates/apps/sns-css-4.1.0-linux.gtk.x86_64.zip
-    - source_hash: md5=3841e9acfe93ffdf008286ecd66455c8
+    - name: /opt/css/nsls_css_tar
+    - source: http://sourceforge.net/projects/cs-studio/files/nsls2-release/CSS-NSLSII-linux64-3.2.16a.zip/download
+    - archive_format: zip
+    - source_hash: md5=2af964bc3c7256048c13a4f5f6e63ebf
+  cmd.run:
+    - name: mv nsls_css_tar/css-nsls2 .
+    - cwd: /opt/css
+  file.absent:
+    - name: /opt/css/nsls_css_tar
 
 css link exists:
   file.symlink:
-    - name: /usr/local/bin
-    - target: /opt/css/sns-css-4.1.0/css
+    - name: /usr/local/bin/css
+    - target: /opt/css/css-nsls2/css-nsls2

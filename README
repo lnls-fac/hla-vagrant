@@ -46,20 +46,17 @@ Usage
 
      vagrant up
 
- On the first run, it may take quite long for the virtual machines to be set
- up. After the machines have been started, ssh into master with
-
-     vagrant ssh master
-
- and apply the state by issuing
-
-     sudo salt '*' state.apply
-
- It may also take a quite long time the first time the state is applies, as
- many packages need to be downloaded and installed. The hla virtual machine
- needs rebooting after the first state application. To ssh as user fac, use one
- of the following (the default fac user password is fac123; remember to change
- it on first login):
+ On the first run, it may take long for the virtual machines to be set up and
+ the state to be applied. The hla virtual machine needs rebooting after the
+ first state application. To ssh as user fac, use one of the following (the
+ default fac user password is fac123; remember to change it on first login):
 
      vagrant ssh va -- -l fac
      vagrant ssh hla -- -l fac -X
+
+ To change the repository versions, set values in hla/salt/pillar/versions.sls
+ and apply the states from the master virtual machine with
+
+     sudo salt '*' state.apply repos.fac
+     sudo salt 'va' state.apply repos.va
+     sudo salt 'hla' state.apply repos.hla

@@ -1,6 +1,6 @@
 fac_files dir exists:
   file.directory:
-    - name: /home/fac_files
+    - name: {{ pillar['repo_base_dir'] }}
     - user: fac
     - group: fac
 
@@ -18,13 +18,13 @@ epics3 dir exists:
 
 epics3 link exists:
   file.symlink:
-    - name: /usr/local/epics/R3.14
+    - name: {{ pillar['epics3_dir'] }}
     - target: /usr/local/epics/R3.14.12.4
     - user: fac
     - group: fac
 
 epics3 extensions dir exists:
   file.directory:
-    - name: /usr/local/epics/R3.14/extensions
+    - name: {{ pillar['epics3_dir'] }}/extensions
     - user: fac
     - group: fac

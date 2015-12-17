@@ -1,4 +1,5 @@
 # Default pillar values
+epics3_dir: /usr/local/epics/R3.14
 repo_base_dir: /home/fac_files
 repo_base_url: https://github.com/lnls-fac
 install_command: develop
