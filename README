@@ -56,4 +56,10 @@ Usage
      sudo salt '*' state.apply
 
  It may also take a quite long time the first time the state is applies, as
- many packages need to be downloaded and installed.
+ many packages need to be downloaded and installed. The hla virtual machine
+ needs rebooting after the first state application. To ssh as user fac, use one
+ of the following (the default fac user password is fac123; remember to change
+ it on first login):
+
+     vagrant ssh va -- -l fac
+     vagrant ssh hla -- -l fac -X

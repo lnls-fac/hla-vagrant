@@ -8,3 +8,4 @@ install epics base:
   cmd.script:
     - name: salt://scripts/install_epics_base.py
     - cwd: /usr/local/epics/R3.14
+    - user: fac

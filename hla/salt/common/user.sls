@@ -4,5 +4,8 @@ fac_user_present:
   user.present:
     - name: fac
     - gid: fac
-    - password: {{ pillar['password'] }}
+    - groups:
+      - fac
+      - sudo
+    - password: {{ pillar['password_hash'] }}
     - shell: /bin/bash

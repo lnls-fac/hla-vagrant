@@ -1,4 +1,5 @@
-hla_packages:  
+hla_packages:
   pkg.installed:
-    - name: ubuntu-desktop
-    - refresh: True
+    - pkgs:
+      - ubuntu-desktop
+      - python3-pyqt5
