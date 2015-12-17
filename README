@@ -46,10 +46,21 @@ Usage
 
      vagrant up
 
- On the first run, it may take long for the virtual machines to be set up and
- the state to be applied. The hla virtual machine needs rebooting after the
- first state application. To ssh as user fac, use one of the following (the
- default fac user password is fac123; remember to change it on first login):
+ On the first run, it may take long for the virtual machines to be set up.
+ After the machines have been started, ssh into master with
+
+     vagrant ssh master
+
+ and apply the state by issuing
+
+     sudo salt '*' state.apply
+
+ It may also take long the first time the state is applied, as many packages
+ need to be downloaded and installed. The hla virtual machine needs rebooting
+ after the first state application.
+
+ To ssh as user fac, use one of the following (the default fac user password is
+ fac123; remember to change it on first login):
 
      vagrant ssh va -- -l fac
      vagrant ssh hla -- -l fac -X
