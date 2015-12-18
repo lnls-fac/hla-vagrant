@@ -1,4 +1,4 @@
-fac_user_present:
+fac group and user present:
   group.present:
     - name: fac
   user.present:

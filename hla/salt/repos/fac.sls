@@ -50,8 +50,8 @@ scripts:
     - force_reset: True
     - user: fac
   cmd.run:
-    - name: make {{ pillar['install_command'] }}
-    - cwd: {{ pillar['repo_base_dir'] }}/code/scripts/bin
+    - name: cd bin && make {{ pillar['install_command'] }} && cd ../etc && make {{ pillar['install_command'] }} && cd ../experiments && make {{ pillar['install_command'] }}
+    - cwd: {{ pillar['repo_base_dir'] }}/code/scripts
 
 sirius:
   git.latest:

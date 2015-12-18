@@ -1,4 +1,4 @@
-system_packages:
+system packages installed:
   pkg.installed:
     - pkgs:
       - htop

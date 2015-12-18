@@ -1,4 +1,4 @@
-hla_packages:
+hla packages:
   pkg.installed:
     - pkgs:
       - ubuntu-desktop
