@@ -8,3 +8,6 @@ install pcaspy:
   cmd.script:
     - name: salt://scripts/install_pcaspy.py
     - cwd: /home/fac
+    - env:
+      - EPICS_BASE: {{ pillar['epics3_dir'] }}/base
+      - EPICS_HOST_ARCH: {{ pillar['epics_host_arch'] }}

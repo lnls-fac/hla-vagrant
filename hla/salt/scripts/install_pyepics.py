@@ -7,7 +7,7 @@ import subprocess
 
 commands = (
     'tar xzf pyepics-3.2.4.tar.gz',
-    'cd pyepics-3.2.4 && source /home/fac/.bashrc && python3 setup.py install && cd ..',
+    'cd pyepics-3.2.4 && python3 setup.py install && cd ..',
     'rm -rf pyepics-3.2.4.tar.gz pyepics-3.2.4'
 )
 

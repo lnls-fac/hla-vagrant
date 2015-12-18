@@ -7,7 +7,7 @@ import subprocess
 
 commands = (
     'tar xzf pcaspy-0.5.1.tar.gz',
-    'cd pcaspy-0.5.1 && source /home/fac/.bashrc && python3 setup.py install && cd ..',
+    'cd pcaspy-0.5.1 && python3 setup.py install && cd ..',
     'rm -rf pcaspy-0.5.1.tar.gz pcaspy-0.5.1'
 )
 

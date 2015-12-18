@@ -8,3 +8,5 @@ install pyepics:
   cmd.script:
     - name: salt://scripts/install_pyepics.py
     - cwd: /home/fac
+    - env:
+      - EPICS_BASE: {{ pillar['epics3_dir'] }}/base
