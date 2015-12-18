@@ -68,3 +68,9 @@ make extensions:
     - name: make
     - cwd: {{ pillar['epics3_dir'] }}/extensions/src
     - user: fac
+
+gateway access file managed:
+  file.managed:
+    - name: /home/fac/GATEWAY.access
+    - source: salt://files/GATEWAY.access
+    - user: fac

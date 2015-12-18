@@ -1,8 +1,3 @@
-bashrc:
-  file.managed:
-    - name: /home/fac/.bashrc
-    - source: salt://files/bashrc
-
 fac-bashrc:
   file.managed:
     - name: /usr/local/etc/fac-bashrc

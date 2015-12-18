@@ -19,8 +19,9 @@ Configuration
 
  When using the environment in a shared computer, change the IP addresses
  before creating the virtual machines. For that, change the value of ip in
- master_config.vm.network for all machines in Vagrantfile. You also need to
- change the master's IP address in all machine files except master in hla/etc.
+ master_config.vm.network for all machines in Vagrantfile; change the master's
+ IP address in all machine files except master in hla/etc. The IP address must
+ also be changed in the *-bashrc files in hla/salt/files.
 
 
 Choosing the lnls-fac package versions

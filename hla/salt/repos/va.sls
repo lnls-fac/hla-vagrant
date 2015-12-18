@@ -15,3 +15,9 @@ siriusdb:
     - target: {{ pillar['repo_base_dir'] }}/siriusdb
     - force_reset: True
     - user: fac
+
+build viocs:
+  cmd.run:
+    - name: ./makeall.sh
+    - cwd: {{ pillar['repo_base_dir'] }}/code/va/viocs
+    - user: fac

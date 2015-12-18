@@ -2,11 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-FACBASHRC="/usr/local/etc/fac-bashrc"
-if [ -f $FACBASHRC ] ; then
-   . $FACBASHRC
-fi
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -110,3 +105,12 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+
+FACBASHRC="/usr/local/etc/fac-bashrc"
+if [ -f $FACBASHRC ] ; then
+   . $FACBASHRC
+fi
+
+export EPICS_CA_ADDR_LIST=192.168.50.11
+export EPICS_CA_AUTO_ADDR_LIST=no
