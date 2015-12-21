@@ -4,4 +4,3 @@ include:
   - common.files
   - common.system_packages
   - common.python_packages
-  - repos.fac

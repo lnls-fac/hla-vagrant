@@ -18,6 +18,6 @@ siriusdb:
 
 build viocs:
   cmd.run:
-    - name: ./makeall.sh
+    - name: bash makeall.sh
     - cwd: {{ pillar['repo_base_dir'] }}/code/va/viocs
     - user: fac
