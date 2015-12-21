@@ -71,4 +71,3 @@ Usage
 
      sudo salt '*' state.apply repos.fac
      sudo salt 'va' state.apply repos.va
-     sudo salt 'hla' state.apply repos.hla
