@@ -59,7 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     hla_config.vm.network "private_network", ip: "192.168.50.12"
 
     hla_config.vm.provider "virtualbox" do |v|
-        v.cpus = 2
+        v.cpus = 4
         v.memory = 1536
     end
 
