@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :master do |master_config|
     master_config.vm.box = "ubuntu/trusty64"
-    master_config.vm.box_config = "= 20151218.0.0"
+    master_config.vm.box_version = "= 20151218.0.0"
     master_config.vm.host_name = 'saltmaster.local'
     master_config.vm.network "private_network", ip: "192.168.80.10"
     master_config.vm.synced_folder "hla/salt/", "/srv/salt"
@@ -35,7 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define :va do |va_config|
     va_config.vm.box = "ubuntu/trusty64"
-    va_config.vm.box_config = "= 20151218.0.0"
+    va_config.vm.box_version = "= 20151218.0.0"
     va_config.vm.host_name = 'va.local'
     va_config.vm.network "private_network", ip: "192.168.50.11"
 
@@ -57,7 +57,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define :hla do |hla_config|
     hla_config.vm.box = "ubuntu/trusty64"
-    hla_config.vm.box_config = "= 20151218.0.0"
+    hla_config.vm.box_version = "= 20151218.0.0"
     hla_config.vm.host_name = 'hla.local'
     hla_config.vm.network "private_network", ip: "192.168.50.12"
 
