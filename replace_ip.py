@@ -4,7 +4,7 @@ import os
 import argparse
 
 
-def replace_file_with_ip(filename, ip):
+def replace_file_with_ip_component(filename, ip_component):
     template_filename = os.path.join('templates', os.path.basename(filename))
 
     with open(template_filename, 'rt') as f:
@@ -13,7 +13,7 @@ def replace_file_with_ip(filename, ip):
     for i in range(len(lines)):
         line = lines[i]
         if line.find(search) > 0:
-            lines[i] = line.replace(search, ip, 1)
+            lines[i] = line.replace(search, ip_component, 1)
 
     with open(filename, 'wt') as f:
         f.writelines(lines)
@@ -21,15 +21,15 @@ def replace_file_with_ip(filename, ip):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('ip', help='IP address component')
+    parser.add_argument('ip_component', help='IP address component')
 
     args = parser.parse_args()
-    ip = args.ip
+    ip_component = args.ip_component
 
     search = '<replace_ip>'
 
-    replace_file_with_ip('Vagrantfile', ip)
-    replace_file_with_ip('hla/etc/hla', ip)
-    replace_file_with_ip('hla/etc/va', ip)
-    replace_file_with_ip('hla/salt/files/hla-bashrc', ip)
-    replace_file_with_ip('hla/salt/files/va-bashrc', ip)
+    replace_file_with_ip_component('Vagrantfile', ip_component)
+    replace_file_with_ip_component('hla/etc/hla', ip_component)
+    replace_file_with_ip_component('hla/etc/va', ip_component)
+    replace_file_with_ip_component('hla/salt/files/hla-bashrc', ip_component)
+    replace_file_with_ip_component('hla/salt/files/va-bashrc', ip_component)
