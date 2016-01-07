@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
+import os
 import argparse
 
 
 def replace_file_with_ip(filename, ip):
-    with open(filename+'_template', 'rt') as f:
+    template_filename = os.path.join('templates', os.path.basename(filename))
+
+    with open(template_filename, 'rt') as f:
         lines = f.readlines()
 
     for i in range(len(lines)):
