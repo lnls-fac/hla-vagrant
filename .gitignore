@@ -1,2 +1,7 @@
 *~
 .vagrant
+Vagrantfile
+hla/etc/hla
+hla/etc/va
+hla/salt/files/hla-bashrc
+hla/salt/files/va-bashrc
