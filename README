@@ -18,12 +18,12 @@ Configuration
 -------------
 
  Before running Vagrant, run replace_ip.py passing as an argument the component
- of the IP address to be substituted in 192.168.<IP component>.X, where X is
+ of the IP address to be substituted in 192.168.<ip_component>.X, where X is
  different for each of the three virtual machines created. When using a shared
  computer, ensure that the component is not already being used by other virtual
  machines. If the computer is not shared, use any valid number, such as 50:
 
-     ./replace_ip.py 50
+     ./replace_ip.py <ip_component>
 
 
 Choosing the lnls-fac package versions
