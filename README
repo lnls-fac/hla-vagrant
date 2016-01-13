@@ -1,7 +1,7 @@
 hla-vagrant
 ===========
 
- Vagrant+SaltStack environment for development and testing
+ Vagrant+SaltStack environment for HLA development and testing
 
 
 Dependencies
