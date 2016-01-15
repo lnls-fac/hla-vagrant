@@ -1,4 +1,5 @@
 # lnls-fac repository versions
+hla_version: v0.1.0
 lnls_version: v0.7.0
 mathphys_version: v0.7.0
 pyaccel_version: v0.12.0

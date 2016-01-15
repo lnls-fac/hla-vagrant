@@ -67,6 +67,7 @@ sirius:
 hla:
   git.latest:
     - name: {{ pillar['repo_base_url'] }}/hla.git
+    - rev: {{ pillar['hla_version'] }}
     - target: {{ pillar['repo_base_dir'] }}/hla
     - force_reset: True
     - user: fac
