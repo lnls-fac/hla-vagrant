@@ -63,7 +63,7 @@ Usage
  after the first state application.
 
  To ssh as user fac, use one of the following (the default fac user password is
- fac123; remember to change it on first login):
+ 'fac123'; remember to change it on first login):
 
      vagrant ssh va -- -l fac
      vagrant ssh hla -- -l fac -X
