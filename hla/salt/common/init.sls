@@ -1,4 +1,5 @@
 include:
+  - common.timezone
   - common.user
   - common.directories
   - common.files
